@@ -17,7 +17,7 @@ jobs:
       - name: Fetch site
         run: |
           mkdir site
-          curl -fsSL "https://customer-assets-0z36b82j.emergentagent.net/wingman/74549407-e1bd-49ff-a4bb-0c5e3aa0d632/attachments/34bba9e57e9d4004b9f6ee4145120b7d_index.html" -o site/index.html
+          curl -fsSL "https://customer-assets-0z36b82j.emergentagent.net/wingman/74549407-e1bd-49ff-a4bb-0c5e3aa0d632/attachments/98a74e1bc2214d78b3438f2b4a979ce7_index.html" -o site/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
