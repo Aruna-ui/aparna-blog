@@ -1,2 +1,3 @@
-# aparna-blog
-Aparna Sriram's kids blog website
+# Aparna Sriram's Blog
+
+A magical kids blogging website.
