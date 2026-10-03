@@ -1,0 +1,26 @@
+name: Deploy Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.d.outputs.page_url }}
+    steps:
+      - name: Fetch site
+        run: |
+          mkdir site
+          curl -fsSL "https://customer-assets-0z36b82j.emergentagent.net/wingman/74549407-e1bd-49ff-a4bb-0c5e3aa0d632/attachments/53ac34eaf4d145ea85ed80271d20bb22_index.html" -o site/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: d
+        uses: actions/deploy-pages@v4
